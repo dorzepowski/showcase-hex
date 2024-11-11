@@ -1,0 +1,419 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`bitwise-parser > should parse BEEF 1`] = `
+{
+  "BUMPs": {
+    "hex": "01fde803010100012979e097d2e838f2c42b70de19ac9e6814ba139e5a0a5e84671bb36d401f9230",
+    "value": {
+      "count": {
+        "hex": "01",
+        "value": 1,
+      },
+      "list": {
+        "hex": "fde803010100012979e097d2e838f2c42b70de19ac9e6814ba139e5a0a5e84671bb36d401f9230",
+        "value": [
+          {
+            "hex": "fde803010100012979e097d2e838f2c42b70de19ac9e6814ba139e5a0a5e84671bb36d401f9230",
+            "value": {
+              "blockHeight": {
+                "hex": "fde803",
+                "value": 1000,
+              },
+              "hex": "fde803010100012979e097d2e838f2c42b70de19ac9e6814ba139e5a0a5e84671bb36d401f9230",
+              "path": {
+                "hex": "0100012979e097d2e838f2c42b70de19ac9e6814ba139e5a0a5e84671bb36d401f9230",
+                "value": [
+                  {
+                    "hex": "0100012979e097d2e838f2c42b70de19ac9e6814ba139e5a0a5e84671bb36d401f9230",
+                    "value": {
+                      "count": {
+                        "hex": "01",
+                        "value": 1,
+                      },
+                      "list": {
+                        "hex": "00012979e097d2e838f2c42b70de19ac9e6814ba139e5a0a5e84671bb36d401f9230",
+                        "value": [
+                          {
+                            "hex": "00012979e097d2e838f2c42b70de19ac9e6814ba139e5a0a5e84671bb36d401f9230",
+                            "value": {
+                              "flags": {
+                                "hex": "01",
+                                "value": {
+                                  "duplicate": true,
+                                  "txid": false,
+                                },
+                              },
+                              "offset": {
+                                "hex": "00",
+                                "value": 0,
+                              },
+                              "txid": {
+                                "hex": "2979e097d2e838f2c42b70de19ac9e6814ba139e5a0a5e84671bb36d401f9230",
+                                "value": "30921f406db31b67845e0a5a9e13ba14689eac19de702bc4f238e8d297e07929",
+                              },
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  },
+                ],
+              },
+              "treeHeight": {
+                "hex": "01",
+                "value": 1,
+              },
+            },
+          },
+        ],
+      },
+    },
+  },
+  "hex": "0100beef01fde803010100012979e097d2e838f2c42b70de19ac9e6814ba139e5a0a5e84671bb36d401f92300201000000012e3f4683e173b40a20527fe5719633ba070df649983614886e90e45aecf2ac56000000006a473044022058610441c199446e68254ddc76070ecf7ded0ad5c476efdb9b1a4d8ff79df09602203090ce5c01a1b45e4015632b629d3e9dfd9efc4bdcebc3f6f50137265b1a118a412102d0bef4aca8e09dca518025679d22cc61bbc980c0f2eaca3a7ca57b53892b86b6ffffffff0101000000000000001976a91457c13a6b752338d14875c42666610850b0143c7188ac00000000010001000000012979e097d2e838f2c42b70de19ac9e6814ba139e5a0a5e84671bb36d401f9230000000006b483045022100cc2875e595732b357ea0302b959b865f4a5d7b726bbbac8070198c8b047deb95022004deccaf1e851e7d37cde7e0a6db158822518e6c9e38ca4b057e6e8d8e149a20412102d0bef4aca8e09dca518025679d22cc61bbc980c0f2eaca3a7ca57b53892b86b6ffffffff0100000000000000001c006a0b68656c6c6f20776f726c6400000b68656c6c6f20776f726c640000000000",
+  "transactions": {
+    "hex": "0201000000012e3f4683e173b40a20527fe5719633ba070df649983614886e90e45aecf2ac56000000006a473044022058610441c199446e68254ddc76070ecf7ded0ad5c476efdb9b1a4d8ff79df09602203090ce5c01a1b45e4015632b629d3e9dfd9efc4bdcebc3f6f50137265b1a118a412102d0bef4aca8e09dca518025679d22cc61bbc980c0f2eaca3a7ca57b53892b86b6ffffffff0101000000000000001976a91457c13a6b752338d14875c42666610850b0143c7188ac00000000010001000000012979e097d2e838f2c42b70de19ac9e6814ba139e5a0a5e84671bb36d401f9230000000006b483045022100cc2875e595732b357ea0302b959b865f4a5d7b726bbbac8070198c8b047deb95022004deccaf1e851e7d37cde7e0a6db158822518e6c9e38ca4b057e6e8d8e149a20412102d0bef4aca8e09dca518025679d22cc61bbc980c0f2eaca3a7ca57b53892b86b6ffffffff0100000000000000001c006a0b68656c6c6f20776f726c6400000b68656c6c6f20776f726c640000000000",
+    "value": {
+      "count": {
+        "hex": "02",
+        "value": 2,
+      },
+      "list": {
+        "hex": "01000000012e3f4683e173b40a20527fe5719633ba070df649983614886e90e45aecf2ac56000000006a473044022058610441c199446e68254ddc76070ecf7ded0ad5c476efdb9b1a4d8ff79df09602203090ce5c01a1b45e4015632b629d3e9dfd9efc4bdcebc3f6f50137265b1a118a412102d0bef4aca8e09dca518025679d22cc61bbc980c0f2eaca3a7ca57b53892b86b6ffffffff0101000000000000001976a91457c13a6b752338d14875c42666610850b0143c7188ac00000000010001000000012979e097d2e838f2c42b70de19ac9e6814ba139e5a0a5e84671bb36d401f9230000000006b483045022100cc2875e595732b357ea0302b959b865f4a5d7b726bbbac8070198c8b047deb95022004deccaf1e851e7d37cde7e0a6db158822518e6c9e38ca4b057e6e8d8e149a20412102d0bef4aca8e09dca518025679d22cc61bbc980c0f2eaca3a7ca57b53892b86b6ffffffff0100000000000000001c006a0b68656c6c6f20776f726c6400000b68656c6c6f20776f726c640000000000",
+        "value": [
+          {
+            "hex": "01000000012e3f4683e173b40a20527fe5719633ba070df649983614886e90e45aecf2ac56000000006a473044022058610441c199446e68254ddc76070ecf7ded0ad5c476efdb9b1a4d8ff79df09602203090ce5c01a1b45e4015632b629d3e9dfd9efc4bdcebc3f6f50137265b1a118a412102d0bef4aca8e09dca518025679d22cc61bbc980c0f2eaca3a7ca57b53892b86b6ffffffff0101000000000000001976a91457c13a6b752338d14875c42666610850b0143c7188ac000000000100",
+            "value": {
+              "bumpIndex": {
+                "hex": "00",
+                "value": 0,
+              },
+              "hasBUMP": {
+                "hex": "01",
+                "value": true,
+              },
+              "rawTx": {
+                "hex": "01000000012e3f4683e173b40a20527fe5719633ba070df649983614886e90e45aecf2ac56000000006a473044022058610441c199446e68254ddc76070ecf7ded0ad5c476efdb9b1a4d8ff79df09602203090ce5c01a1b45e4015632b629d3e9dfd9efc4bdcebc3f6f50137265b1a118a412102d0bef4aca8e09dca518025679d22cc61bbc980c0f2eaca3a7ca57b53892b86b6ffffffff0101000000000000001976a91457c13a6b752338d14875c42666610850b0143c7188ac00000000",
+                "value": {
+                  "hex": undefined,
+                  "inputs": {
+                    "hex": "012e3f4683e173b40a20527fe5719633ba070df649983614886e90e45aecf2ac56000000006a473044022058610441c199446e68254ddc76070ecf7ded0ad5c476efdb9b1a4d8ff79df09602203090ce5c01a1b45e4015632b629d3e9dfd9efc4bdcebc3f6f50137265b1a118a412102d0bef4aca8e09dca518025679d22cc61bbc980c0f2eaca3a7ca57b53892b86b6ffffffff",
+                    "value": {
+                      "count": {
+                        "hex": "01",
+                        "value": 1,
+                      },
+                      "list": {
+                        "hex": "2e3f4683e173b40a20527fe5719633ba070df649983614886e90e45aecf2ac56000000006a473044022058610441c199446e68254ddc76070ecf7ded0ad5c476efdb9b1a4d8ff79df09602203090ce5c01a1b45e4015632b629d3e9dfd9efc4bdcebc3f6f50137265b1a118a412102d0bef4aca8e09dca518025679d22cc61bbc980c0f2eaca3a7ca57b53892b86b6ffffffff",
+                        "value": [
+                          {
+                            "hex": "2e3f4683e173b40a20527fe5719633ba070df649983614886e90e45aecf2ac56000000006a473044022058610441c199446e68254ddc76070ecf7ded0ad5c476efdb9b1a4d8ff79df09602203090ce5c01a1b45e4015632b629d3e9dfd9efc4bdcebc3f6f50137265b1a118a412102d0bef4aca8e09dca518025679d22cc61bbc980c0f2eaca3a7ca57b53892b86b6ffffffff",
+                            "value": {
+                              "scriptLength": {
+                                "hex": "6a",
+                                "value": 106,
+                              },
+                              "sequenceNumber": {
+                                "hex": "ffffffff",
+                                "value": 4294967295,
+                              },
+                              "sourceOutputIndex": {
+                                "hex": "00000000",
+                                "value": 0,
+                              },
+                              "sourceTxId": {
+                                "hex": "2e3f4683e173b40a20527fe5719633ba070df649983614886e90e45aecf2ac56",
+                                "value": "56acf2ec5ae4906e8814369849f60d07ba339671e57f52200ab473e183463f2e",
+                              },
+                              "unlockingScript": {
+                                "hex": "473044022058610441c199446e68254ddc76070ecf7ded0ad5c476efdb9b1a4d8ff79df09602203090ce5c01a1b45e4015632b629d3e9dfd9efc4bdcebc3f6f50137265b1a118a412102d0bef4aca8e09dca518025679d22cc61bbc980c0f2eaca3a7ca57b53892b86b6",
+                                "value": "3044022058610441c199446e68254ddc76070ecf7ded0ad5c476efdb9b1a4d8ff79df09602203090ce5c01a1b45e4015632b629d3e9dfd9efc4bdcebc3f6f50137265b1a118a41 02d0bef4aca8e09dca518025679d22cc61bbc980c0f2eaca3a7ca57b53892b86b6",
+                              },
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  },
+                  "nLockTime": {
+                    "hex": "00000000",
+                    "value": 0,
+                  },
+                  "outputs": {
+                    "hex": "0101000000000000001976a91457c13a6b752338d14875c42666610850b0143c7188ac",
+                    "value": {
+                      "count": {
+                        "hex": "01",
+                        "value": 1,
+                      },
+                      "list": {
+                        "hex": "01000000000000001976a91457c13a6b752338d14875c42666610850b0143c7188ac",
+                        "value": [
+                          {
+                            "hex": "01000000000000001976a91457c13a6b752338d14875c42666610850b0143c7188ac",
+                            "value": {
+                              "lockingScript": {
+                                "hex": "76a91457c13a6b752338d14875c42666610850b0143c7188ac",
+                                "value": "OP_DUP OP_HASH160 57c13a6b752338d14875c42666610850b0143c71 OP_EQUALVERIFY OP_CHECKSIG",
+                              },
+                              "scriptLength": {
+                                "hex": "19",
+                                "value": 25,
+                              },
+                              "value": {
+                                "hex": "0100000000000000",
+                                "value": 1,
+                              },
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  },
+                  "version": {
+                    "hex": "01000000",
+                    "value": 1,
+                  },
+                },
+              },
+            },
+          },
+          {
+            "hex": "01000000012979e097d2e838f2c42b70de19ac9e6814ba139e5a0a5e84671bb36d401f9230000000006b483045022100cc2875e595732b357ea0302b959b865f4a5d7b726bbbac8070198c8b047deb95022004deccaf1e851e7d37cde7e0a6db158822518e6c9e38ca4b057e6e8d8e149a20412102d0bef4aca8e09dca518025679d22cc61bbc980c0f2eaca3a7ca57b53892b86b6ffffffff0100000000000000001c006a0b68656c6c6f20776f726c6400000b68656c6c6f20776f726c640000000000",
+            "value": {
+              "hasBUMP": {
+                "hex": "00",
+                "value": false,
+              },
+              "rawTx": {
+                "hex": "01000000012979e097d2e838f2c42b70de19ac9e6814ba139e5a0a5e84671bb36d401f9230000000006b483045022100cc2875e595732b357ea0302b959b865f4a5d7b726bbbac8070198c8b047deb95022004deccaf1e851e7d37cde7e0a6db158822518e6c9e38ca4b057e6e8d8e149a20412102d0bef4aca8e09dca518025679d22cc61bbc980c0f2eaca3a7ca57b53892b86b6ffffffff0100000000000000001c006a0b68656c6c6f20776f726c6400000b68656c6c6f20776f726c6400000000",
+                "value": {
+                  "hex": undefined,
+                  "inputs": {
+                    "hex": "012979e097d2e838f2c42b70de19ac9e6814ba139e5a0a5e84671bb36d401f9230000000006b483045022100cc2875e595732b357ea0302b959b865f4a5d7b726bbbac8070198c8b047deb95022004deccaf1e851e7d37cde7e0a6db158822518e6c9e38ca4b057e6e8d8e149a20412102d0bef4aca8e09dca518025679d22cc61bbc980c0f2eaca3a7ca57b53892b86b6ffffffff",
+                    "value": {
+                      "count": {
+                        "hex": "01",
+                        "value": 1,
+                      },
+                      "list": {
+                        "hex": "2979e097d2e838f2c42b70de19ac9e6814ba139e5a0a5e84671bb36d401f9230000000006b483045022100cc2875e595732b357ea0302b959b865f4a5d7b726bbbac8070198c8b047deb95022004deccaf1e851e7d37cde7e0a6db158822518e6c9e38ca4b057e6e8d8e149a20412102d0bef4aca8e09dca518025679d22cc61bbc980c0f2eaca3a7ca57b53892b86b6ffffffff",
+                        "value": [
+                          {
+                            "hex": "2979e097d2e838f2c42b70de19ac9e6814ba139e5a0a5e84671bb36d401f9230000000006b483045022100cc2875e595732b357ea0302b959b865f4a5d7b726bbbac8070198c8b047deb95022004deccaf1e851e7d37cde7e0a6db158822518e6c9e38ca4b057e6e8d8e149a20412102d0bef4aca8e09dca518025679d22cc61bbc980c0f2eaca3a7ca57b53892b86b6ffffffff",
+                            "value": {
+                              "scriptLength": {
+                                "hex": "6b",
+                                "value": 107,
+                              },
+                              "sequenceNumber": {
+                                "hex": "ffffffff",
+                                "value": 4294967295,
+                              },
+                              "sourceOutputIndex": {
+                                "hex": "00000000",
+                                "value": 0,
+                              },
+                              "sourceTxId": {
+                                "hex": "2979e097d2e838f2c42b70de19ac9e6814ba139e5a0a5e84671bb36d401f9230",
+                                "value": "30921f406db31b67845e0a5a9e13ba14689eac19de702bc4f238e8d297e07929",
+                              },
+                              "unlockingScript": {
+                                "hex": "483045022100cc2875e595732b357ea0302b959b865f4a5d7b726bbbac8070198c8b047deb95022004deccaf1e851e7d37cde7e0a6db158822518e6c9e38ca4b057e6e8d8e149a20412102d0bef4aca8e09dca518025679d22cc61bbc980c0f2eaca3a7ca57b53892b86b6",
+                                "value": "3045022100cc2875e595732b357ea0302b959b865f4a5d7b726bbbac8070198c8b047deb95022004deccaf1e851e7d37cde7e0a6db158822518e6c9e38ca4b057e6e8d8e149a2041 02d0bef4aca8e09dca518025679d22cc61bbc980c0f2eaca3a7ca57b53892b86b6",
+                              },
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  },
+                  "nLockTime": {
+                    "hex": "00000000",
+                    "value": 0,
+                  },
+                  "outputs": {
+                    "hex": "0100000000000000001c006a0b68656c6c6f20776f726c6400000b68656c6c6f20776f726c64",
+                    "value": {
+                      "count": {
+                        "hex": "01",
+                        "value": 1,
+                      },
+                      "list": {
+                        "hex": "00000000000000001c006a0b68656c6c6f20776f726c6400000b68656c6c6f20776f726c64",
+                        "value": [
+                          {
+                            "hex": "00000000000000001c006a0b68656c6c6f20776f726c6400000b68656c6c6f20776f726c64",
+                            "value": {
+                              "lockingScript": {
+                                "hex": "006a0b68656c6c6f20776f726c6400000b68656c6c6f20776f726c64",
+                                "value": "OP_0 OP_RETURN 68656c6c6f20776f726c64 OP_0 OP_0 68656c6c6f20776f726c64",
+                              },
+                              "scriptLength": {
+                                "hex": "1c",
+                                "value": 28,
+                              },
+                              "value": {
+                                "hex": "0000000000000000",
+                                "value": 0,
+                              },
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  },
+                  "version": {
+                    "hex": "01000000",
+                    "value": 1,
+                  },
+                },
+              },
+            },
+          },
+        ],
+      },
+    },
+  },
+  "version": {
+    "hex": "0100beef",
+    "value": 1,
+  },
+}
+`;
+
+exports[`bitwise-parser > should parse BUMP 1`] = `
+{
+  "blockHeight": {
+    "hex": "fde803",
+    "value": 1000,
+  },
+  "hex": "fde803010100012979e097d2e838f2c42b70de19ac9e6814ba139e5a0a5e84671bb36d401f9230",
+  "path": {
+    "hex": "0100012979e097d2e838f2c42b70de19ac9e6814ba139e5a0a5e84671bb36d401f9230",
+    "value": [
+      {
+        "hex": "0100012979e097d2e838f2c42b70de19ac9e6814ba139e5a0a5e84671bb36d401f9230",
+        "value": {
+          "count": {
+            "hex": "01",
+            "value": 1,
+          },
+          "list": {
+            "hex": "00012979e097d2e838f2c42b70de19ac9e6814ba139e5a0a5e84671bb36d401f9230",
+            "value": [
+              {
+                "hex": "00012979e097d2e838f2c42b70de19ac9e6814ba139e5a0a5e84671bb36d401f9230",
+                "value": {
+                  "flags": {
+                    "hex": "01",
+                    "value": {
+                      "duplicate": true,
+                      "txid": false,
+                    },
+                  },
+                  "offset": {
+                    "hex": "00",
+                    "value": 0,
+                  },
+                  "txid": {
+                    "hex": "2979e097d2e838f2c42b70de19ac9e6814ba139e5a0a5e84671bb36d401f9230",
+                    "value": "30921f406db31b67845e0a5a9e13ba14689eac19de702bc4f238e8d297e07929",
+                  },
+                },
+              },
+            ],
+          },
+        },
+      },
+    ],
+  },
+  "treeHeight": {
+    "hex": "01",
+    "value": 1,
+  },
+}
+`;
+
+exports[`bitwise-parser > should parse RawTx 1`] = `
+{
+  "hex": "01000000012e3f4683e173b40a20527fe5719633ba070df649983614886e90e45aecf2ac56000000006a473044022058610441c199446e68254ddc76070ecf7ded0ad5c476efdb9b1a4d8ff79df09602203090ce5c01a1b45e4015632b629d3e9dfd9efc4bdcebc3f6f50137265b1a118a412102d0bef4aca8e09dca518025679d22cc61bbc980c0f2eaca3a7ca57b53892b86b6ffffffff0101000000000000001976a91457c13a6b752338d14875c42666610850b0143c7188ac00000000",
+  "inputs": {
+    "hex": "012e3f4683e173b40a20527fe5719633ba070df649983614886e90e45aecf2ac56000000006a473044022058610441c199446e68254ddc76070ecf7ded0ad5c476efdb9b1a4d8ff79df09602203090ce5c01a1b45e4015632b629d3e9dfd9efc4bdcebc3f6f50137265b1a118a412102d0bef4aca8e09dca518025679d22cc61bbc980c0f2eaca3a7ca57b53892b86b6ffffffff",
+    "value": {
+      "count": {
+        "hex": "01",
+        "value": 1,
+      },
+      "list": {
+        "hex": "2e3f4683e173b40a20527fe5719633ba070df649983614886e90e45aecf2ac56000000006a473044022058610441c199446e68254ddc76070ecf7ded0ad5c476efdb9b1a4d8ff79df09602203090ce5c01a1b45e4015632b629d3e9dfd9efc4bdcebc3f6f50137265b1a118a412102d0bef4aca8e09dca518025679d22cc61bbc980c0f2eaca3a7ca57b53892b86b6ffffffff",
+        "value": [
+          {
+            "hex": "2e3f4683e173b40a20527fe5719633ba070df649983614886e90e45aecf2ac56000000006a473044022058610441c199446e68254ddc76070ecf7ded0ad5c476efdb9b1a4d8ff79df09602203090ce5c01a1b45e4015632b629d3e9dfd9efc4bdcebc3f6f50137265b1a118a412102d0bef4aca8e09dca518025679d22cc61bbc980c0f2eaca3a7ca57b53892b86b6ffffffff",
+            "value": {
+              "scriptLength": {
+                "hex": "6a",
+                "value": 106,
+              },
+              "sequenceNumber": {
+                "hex": "ffffffff",
+                "value": 4294967295,
+              },
+              "sourceOutputIndex": {
+                "hex": "00000000",
+                "value": 0,
+              },
+              "sourceTxId": {
+                "hex": "2e3f4683e173b40a20527fe5719633ba070df649983614886e90e45aecf2ac56",
+                "value": "56acf2ec5ae4906e8814369849f60d07ba339671e57f52200ab473e183463f2e",
+              },
+              "unlockingScript": {
+                "hex": "473044022058610441c199446e68254ddc76070ecf7ded0ad5c476efdb9b1a4d8ff79df09602203090ce5c01a1b45e4015632b629d3e9dfd9efc4bdcebc3f6f50137265b1a118a412102d0bef4aca8e09dca518025679d22cc61bbc980c0f2eaca3a7ca57b53892b86b6",
+                "value": "3044022058610441c199446e68254ddc76070ecf7ded0ad5c476efdb9b1a4d8ff79df09602203090ce5c01a1b45e4015632b629d3e9dfd9efc4bdcebc3f6f50137265b1a118a41 02d0bef4aca8e09dca518025679d22cc61bbc980c0f2eaca3a7ca57b53892b86b6",
+              },
+            },
+          },
+        ],
+      },
+    },
+  },
+  "nLockTime": {
+    "hex": "00000000",
+    "value": 0,
+  },
+  "outputs": {
+    "hex": "0101000000000000001976a91457c13a6b752338d14875c42666610850b0143c7188ac",
+    "value": {
+      "count": {
+        "hex": "01",
+        "value": 1,
+      },
+      "list": {
+        "hex": "01000000000000001976a91457c13a6b752338d14875c42666610850b0143c7188ac",
+        "value": [
+          {
+            "hex": "01000000000000001976a91457c13a6b752338d14875c42666610850b0143c7188ac",
+            "value": {
+              "lockingScript": {
+                "hex": "76a91457c13a6b752338d14875c42666610850b0143c7188ac",
+                "value": "OP_DUP OP_HASH160 57c13a6b752338d14875c42666610850b0143c71 OP_EQUALVERIFY OP_CHECKSIG",
+              },
+              "scriptLength": {
+                "hex": "19",
+                "value": 25,
+              },
+              "value": {
+                "hex": "0100000000000000",
+                "value": 1,
+              },
+            },
+          },
+        ],
+      },
+    },
+  },
+  "version": {
+    "hex": "01000000",
+    "value": 1,
+  },
+}
+`;
