@@ -8,7 +8,11 @@
     "build": "tsc -b && vite build",
     "test": "vitest",
     "lint": "eslint .",
+    "format": "prettier --write 'src/**/*.{ts,tsx,js,jsx,json,css}'",
     "preview": "vite preview"
+  },
+  "engines": {
+    "node": ">=20"
   },
   "dependencies": {
     "@bsv/sdk": "^1.1.30",
@@ -29,6 +33,7 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.11.0",
+    "prettier": "^3.3.3",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.11.0",
     "vite": "^5.4.10",

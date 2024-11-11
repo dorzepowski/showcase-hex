@@ -6,7 +6,6 @@ import { Theme } from '@mui/material/styles';
 import { useSearchParams } from 'react-router-dom';
 import { BUMPFlags } from '../../parser/bsv-hex-reader.ts';
 
-
 interface CamelCaseToWordsProps {
   children: string;
   sx?: SxProps<Theme>;
@@ -57,11 +56,17 @@ const Hex: FC<HexProps> = ({ children, path }) => {
   };
 
   // return <Tooltip onOpen={onOpen} onClose={onClose} open={open} title={<HexTooltipContent path={path} />} placement="top-end" arrow>
-  return <Tooltip title={<HexTooltipContent path={path} />} placement="top-end" arrow>
-    <Typography onClick={onClick} variant="overline" className={`hex-part ${children.length > 30 && 'hex-long'} ${isSelected && 'hex-selected'}`}>
-      {children}
-    </Typography>
-  </Tooltip>;
+  return (
+    <Tooltip title={<HexTooltipContent path={path} />} placement="top-end" arrow>
+      <Typography
+        onClick={onClick}
+        variant="overline"
+        className={`hex-part ${children.length > 30 && 'hex-long'} ${isSelected && 'hex-selected'}`}
+      >
+        {children}
+      </Typography>
+    </Tooltip>
+  );
 };
 
 interface ArrayHexExplorerProps {
@@ -73,15 +78,21 @@ interface ArrayHexExplorerProps {
 const ArrayHexExplorer: FC<ArrayHexExplorerProps> = ({ hex, children, path }) => {
   const valueItems = children.filter(isValueType);
   if (valueItems.length !== children.length) {
-    console.warn(`Hex part (${hex}) contains unexpected type of items, printing only hex. Under the path ${path.join('/')}`);
+    console.warn(
+      `Hex part (${hex}) contains unexpected type of items, printing only hex. Under the path ${path.join('/')}`,
+    );
     return <Hex path={path}>{hex}</Hex>;
   }
 
-  return (<>
-    {valueItems.map((value, index) => (
-      <ValueHexExplorer key={index} path={[...path, index.toString()]}>{value}</ValueHexExplorer>
-    ))}
-  </>);
+  return (
+    <>
+      {valueItems.map((value, index) => (
+        <ValueHexExplorer key={index} path={[...path, index.toString()]}>
+          {value}
+        </ValueHexExplorer>
+      ))}
+    </>
+  );
 };
 
 interface ObjectHexExplorerProps {
@@ -95,7 +106,9 @@ const ObjectHexExplorer: FC<ObjectHexExplorerProps> = ({ children, path }) => {
   return (
     <>
       {valueEntries.map(([key, value], index) => (
-        <ValueHexExplorer key={index} path={[...path, key]}>{value}</ValueHexExplorer>
+        <ValueHexExplorer key={index} path={[...path, key]}>
+          {value}
+        </ValueHexExplorer>
       ))}
     </>
   );
@@ -112,11 +125,17 @@ const ValueHexExplorer: FC<ValueHexExplorerProps> = ({ children: { hex, value },
     return <Hex path={path}>{hex}</Hex>;
   }
   if (isValueType(value)) {
-    console.warn(`Hex part (${hex}) has unexpected value of type value, printing only hex. Under the path ${path.join('/')}`);
+    console.warn(
+      `Hex part (${hex}) has unexpected value of type value, printing only hex. Under the path ${path.join('/')}`,
+    );
     return <Hex path={path}>{hex}</Hex>;
   }
   if (Array.isArray(value)) {
-    return <ArrayHexExplorer hex={hex} path={path}>{value}</ArrayHexExplorer>;
+    return (
+      <ArrayHexExplorer hex={hex} path={path}>
+        {value}
+      </ArrayHexExplorer>
+    );
   }
   if (isFlagsType(value)) {
     return <Hex path={path}>{hex}</Hex>;
@@ -159,7 +178,9 @@ export const HexExplorer: FC<HexExplorerProps> = ({ children }) => {
     },
   };
 
-  return <Grid2 sx={style}>
-    <ValueHexExplorer path={[]}>{children}</ValueHexExplorer>
-  </Grid2>;
+  return (
+    <Grid2 sx={style}>
+      <ValueHexExplorer path={[]}>{children}</ValueHexExplorer>
+    </Grid2>
+  );
 };

@@ -49,15 +49,8 @@ export const BEEFProvider: FC<PropsWithChildren> = ({ children }) => {
   const { beef } = useParams();
   let value: ParsedBEEF = { empty: true, valid: true, error: undefined };
   if (beef) {
-    value = parse(beef)
+    value = parse(beef);
   }
 
-  return (
-    <Context.Provider
-      value={{value}}
-    >
-      {children}
-    </Context.Provider>
-  );
+  return <Context.Provider value={{ value }}>{children}</Context.Provider>;
 };
-

@@ -14,8 +14,10 @@ export const BEEFExplorer: FC = () => {
     value: parsedBEEF.beef,
   };
 
-  return <Stack>
-    <Typography variant="h4">BEEF:</Typography>
-    <HexExplorer>{valuedBEEF}</HexExplorer>
-  </Stack>;
+  return (
+    <Stack>
+      <Typography variant="h4">BEEF:</Typography>
+      <HexExplorer>{valuedBEEF}</HexExplorer>
+    </Stack>
+  );
 };

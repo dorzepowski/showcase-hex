@@ -41,15 +41,8 @@ export const RawTxProvider: FC<PropsWithChildren> = ({ children }) => {
   const { rawtx } = useParams();
   let value: ParsedRawTx = { empty: true, valid: true, error: undefined };
   if (rawtx) {
-    value = parse(rawtx)
+    value = parse(rawtx);
   }
 
-  return (
-    <Context.Provider
-      value={{value}}
-    >
-      {children}
-    </Context.Provider>
-  );
+  return <Context.Provider value={{ value }}>{children}</Context.Provider>;
 };
-

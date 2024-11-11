@@ -14,8 +14,10 @@ export const RawTxBreakDown = () => {
     value: parsedRawTx.rawTx,
   };
 
-  return <Stack spacing={1}>
-    <Typography variant="h4">Break Down:</Typography>
-    <RawTx value={valuedRawTx} path={[]} />
-  </Stack>;
+  return (
+    <Stack spacing={1}>
+      <Typography variant="h4">Break Down:</Typography>
+      <RawTx value={valuedRawTx} path={[]} />
+    </Stack>
+  );
 };

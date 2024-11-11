@@ -7,8 +7,12 @@ function BUMPApp() {
   return (
     <BUMPProvider>
       <Stack spacing={2}>
-        <Grid2><BUMPForm /></Grid2>
-        <Grid2><Outlet /></Grid2>
+        <Grid2>
+          <BUMPForm />
+        </Grid2>
+        <Grid2>
+          <Outlet />
+        </Grid2>
       </Stack>
     </BUMPProvider>
   );

@@ -22,7 +22,6 @@ export interface InvalidRawTx {
 
 export type ParsedRawTx = ValidRawTx | EmptyRawTx | InvalidRawTx;
 
-
 interface RawTxContextValue {
   value: ParsedRawTx;
 }

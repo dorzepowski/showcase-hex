@@ -7,25 +7,29 @@ export const BEEFForm = () => {
   const { beef: beefParam } = useParams();
 
   const [beef, setBeef] = useState(beefParam || '');
-  const {valid, error} = useBEEF()
+  const { valid, error } = useBEEF();
   const navigate = useNavigate();
-
 
   const submitBeef = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     navigate(`./${beef}`);
   };
 
-  return <Grid2 offset={2} size={8}>
-    <form noValidate autoComplete="off" onSubmit={submitBeef}>
-      <TextField fullWidth
-                 label="BEEF" id="beef"
-                 value={beef}
-                 error={!valid}
-                 helperText={error}
-                 onChange={(event: ChangeEvent<HTMLInputElement>) => {
-                   setBeef(event.target.value);
-                 }} />
-    </form>
-  </Grid2>
+  return (
+    <Grid2 offset={2} size={8}>
+      <form noValidate autoComplete="off" onSubmit={submitBeef}>
+        <TextField
+          fullWidth
+          label="BEEF"
+          id="beef"
+          value={beef}
+          error={!valid}
+          helperText={error}
+          onChange={(event: ChangeEvent<HTMLInputElement>) => {
+            setBeef(event.target.value);
+          }}
+        />
+      </form>
+    </Grid2>
+  );
 };

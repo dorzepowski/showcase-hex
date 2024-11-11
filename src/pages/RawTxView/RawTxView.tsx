@@ -4,12 +4,14 @@ import { RawTxExplorer } from '../../components/RawTxExplorer/RawTxExplorer.tsx'
 import { RawTxBreakDown } from '../../components/RawTxBreakDown/RawTxBreakDown.tsx';
 
 export const RawTxView: FC = () => {
-  return <>
-    <Grid2 size={10} offset={1}>
-      <Stack spacing={2}>
-        <RawTxExplorer />
-        <RawTxBreakDown />
-      </Stack>
-    </Grid2>
-  </>;
+  return (
+    <>
+      <Grid2 size={10} offset={1}>
+        <Stack spacing={2}>
+          <RawTxExplorer />
+          <RawTxBreakDown />
+        </Stack>
+      </Grid2>
+    </>
+  );
 };

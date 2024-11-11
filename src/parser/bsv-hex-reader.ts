@@ -26,7 +26,7 @@ export interface BUMP {
   path: Value<Value<BUMPLevel>[]>;
 }
 
-export type BEEFTransactions = HexList<BEEFTransaction>
+export type BEEFTransactions = HexList<BEEFTransaction>;
 
 export interface BUMPFlags {
   duplicate: boolean;
@@ -112,12 +112,11 @@ export class BsvHexReader {
     writer.blockHeight = this.varIntValueFrom(this.reader.readVarInt());
 
     const treeHeight = this.int8valueFrom(this.reader.read(1));
-    const path = rangeTo(treeHeight.value)
-      .map(() => this.readBUMPLevel());
+    const path = rangeTo(treeHeight.value).map(() => this.readBUMPLevel());
 
     writer.treeHeight = treeHeight;
     writer.path = {
-      hex: path.map(p => p.hex).join(''),
+      hex: path.map((p) => p.hex).join(''),
       value: path,
     };
 
@@ -140,12 +139,12 @@ export class BsvHexReader {
         this.readBUMPTo(w);
         return w;
       })
-      .map(w => ({
+      .map((w) => ({
         hex: w.hex,
         value: w,
       }));
 
-    const bumpListHex = BUMPs.map(b => b.hex).join('');
+    const bumpListHex = BUMPs.map((b) => b.hex).join('');
 
     writer.hex = numberOfBUMPs.hex + bumpListHex;
     writer.count = numberOfBUMPs;
@@ -157,10 +156,9 @@ export class BsvHexReader {
 
   private readTransactionsTo(writer: BEEFWriter) {
     const numberOfTransactions = this.varIntValueFrom(this.reader.readVarInt());
-    const transactions = rangeTo(numberOfTransactions.value)
-      .map(() => this.readBEEFTransaction());
+    const transactions = rangeTo(numberOfTransactions.value).map(() => this.readBEEFTransaction());
 
-    const transactionsHex = transactions.map(t => t.hex).join('');
+    const transactionsHex = transactions.map((t) => t.hex).join('');
 
     writer.transactions = {
       hex: numberOfTransactions.hex + transactionsHex,
@@ -176,10 +174,9 @@ export class BsvHexReader {
 
   private readBUMPLevel(): Value<BUMPLevel> {
     const leavesCount = this.varIntValueFrom(this.reader.readVarInt());
-    const leaves = rangeTo(leavesCount.value)
-      .map(() => this.readBUMPLeaf());
+    const leaves = rangeTo(leavesCount.value).map(() => this.readBUMPLeaf());
 
-    const leavesHex = leaves.map(l => l.hex).join('');
+    const leavesHex = leaves.map((l) => l.hex).join('');
 
     return {
       hex: leavesCount.hex + leavesHex,
@@ -248,13 +245,12 @@ export class BsvHexReader {
 
   private readInputs(): Value<RawTxInputs> {
     const inputsCount = this.varIntValueFrom(this.reader.readVarInt());
-    const inputs = rangeTo(inputsCount.value)
-      .map(() => this.readInput());
+    const inputs = rangeTo(inputsCount.value).map(() => this.readInput());
 
-    const inHex = inputs.map(i => i.hex).join('');
+    const inHex = inputs.map((i) => i.hex).join('');
 
     return {
-      hex: inputsCount.hex + inputs.map(i => i.hex).join(''),
+      hex: inputsCount.hex + inputs.map((i) => i.hex).join(''),
       value: {
         count: inputsCount,
         list: {
@@ -285,10 +281,9 @@ export class BsvHexReader {
 
   private readOutputs(): Value<RawTxOutputs> {
     const outputsCount = this.varIntValueFrom(this.reader.readVarInt());
-    const outputs = rangeTo(outputsCount.value)
-      .map(() => this.readOutput());
+    const outputs = rangeTo(outputsCount.value).map(() => this.readOutput());
 
-    const outHex = outputs.map(o => o.hex).join('');
+    const outHex = outputs.map((o) => o.hex).join('');
 
     return {
       hex: outputsCount.hex + outHex,

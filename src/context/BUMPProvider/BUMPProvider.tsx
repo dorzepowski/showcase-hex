@@ -41,15 +41,8 @@ export const BUMPProvider: FC<PropsWithChildren> = ({ children }) => {
   const { bump } = useParams();
   let value: ParsedBUMP = { empty: true, valid: true, error: undefined };
   if (bump) {
-    value = parse(bump)
+    value = parse(bump);
   }
 
-  return (
-    <Context.Provider
-      value={{value}}
-    >
-      {children}
-    </Context.Provider>
-  );
+  return <Context.Provider value={{ value }}>{children}</Context.Provider>;
 };
-

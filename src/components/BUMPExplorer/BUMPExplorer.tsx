@@ -14,8 +14,10 @@ export const BUMPExplorer: FC = () => {
     value: parsedBUMP.bump,
   };
 
-  return <Stack>
-    <Typography variant="h4">Merkle Path (BUMP):</Typography>
-    <HexExplorer>{valuedBUMP}</HexExplorer>
-  </Stack>;
+  return (
+    <Stack>
+      <Typography variant="h4">Merkle Path (BUMP):</Typography>
+      <HexExplorer>{valuedBUMP}</HexExplorer>
+    </Stack>
+  );
 };

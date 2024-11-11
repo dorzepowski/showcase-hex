@@ -22,7 +22,6 @@ export interface InvalidBEEF {
 
 export type ParsedBEEF = ValidBEEF | EmptyBEEF | InvalidBEEF;
 
-
 interface BEEFContextValue {
   value: ParsedBEEF;
 }

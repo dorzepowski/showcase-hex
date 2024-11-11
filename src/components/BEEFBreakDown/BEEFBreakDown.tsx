@@ -11,19 +11,16 @@ export const BEEFBreakDown = () => {
     return null;
   }
 
-  const {
-    version,
-    BUMPs: bumps,
-    transactions,
-  } = parsedBEEF.beef;
+  const { version, BUMPs: bumps, transactions } = parsedBEEF.beef;
 
-  return <Stack spacing={1}>
-    <Typography variant="h4">Break Down:</Typography>
-    <Grid2>
-      <Version value={version} />
-      <MerklePaths value={bumps} />
-      <Transactions value={transactions} />
-    </Grid2>
-  </Stack>;
-
+  return (
+    <Stack spacing={1}>
+      <Typography variant="h4">Break Down:</Typography>
+      <Grid2>
+        <Version value={version} />
+        <MerklePaths value={bumps} />
+        <Transactions value={transactions} />
+      </Grid2>
+    </Stack>
+  );
 };

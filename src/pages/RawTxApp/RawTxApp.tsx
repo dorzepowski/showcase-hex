@@ -8,8 +8,12 @@ function RawTxApp() {
     <RawTxProvider>
       <Grid2 size={12}>
         <Stack spacing={2}>
-          <Grid2><RawTxForm /></Grid2>
-          <Grid2><Outlet /></Grid2>
+          <Grid2>
+            <RawTxForm />
+          </Grid2>
+          <Grid2>
+            <Outlet />
+          </Grid2>
         </Stack>
       </Grid2>
     </RawTxProvider>

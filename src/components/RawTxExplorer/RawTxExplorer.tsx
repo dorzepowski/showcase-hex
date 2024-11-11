@@ -14,8 +14,10 @@ export const RawTxExplorer: FC = () => {
     value: parsedRawTx.rawTx,
   };
 
-  return <Stack>
-    <Typography variant="h4">Raw Transaction:</Typography>
-    <HexExplorer>{valuedRawTx}</HexExplorer>
-  </Stack>;
+  return (
+    <Stack>
+      <Typography variant="h4">Raw Transaction:</Typography>
+      <HexExplorer>{valuedRawTx}</HexExplorer>
+    </Stack>
+  );
 };

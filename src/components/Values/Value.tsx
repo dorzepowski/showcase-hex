@@ -10,7 +10,11 @@ interface HexProps extends TypographyOwnProps {
 }
 
 export const Hex: FC<HexProps> = ({ children, ...props }) => {
-  return <Typography variant="overline" sx={{ wordBreak: 'break-word' }} {...props} >{children}</Typography>;
+  return (
+    <Typography variant="overline" sx={{ wordBreak: 'break-word' }} {...props}>
+      {children}
+    </Typography>
+  );
 };
 
 interface HexLabeledProps extends HexProps {
@@ -18,10 +22,12 @@ interface HexLabeledProps extends HexProps {
 }
 
 export const HexLabeled: FC<HexLabeledProps> = ({ children, label }) => {
-  return <Typography variant="body1">
-    <span style={{ textWrap: 'nowrap' }}>{label}:&nbsp;</span>
-    <Hex>{children}</Hex>
-  </Typography>;
+  return (
+    <Typography variant="body1">
+      <span style={{ textWrap: 'nowrap' }}>{label}:&nbsp;</span>
+      <Hex>{children}</Hex>
+    </Typography>
+  );
 };
 
 interface HexValueProps extends HexLabeledProps {
@@ -29,10 +35,14 @@ interface HexValueProps extends HexLabeledProps {
 }
 
 const HexValuedAndLabeled: FC<HexValueProps> = ({ children, value, label }) => {
-  return <Typography variant="body1">
-    <span style={{ textWrap: 'nowrap' }}>{label}: {value} |&nbsp;</span>
-    <Hex>{children}</Hex>
-  </Typography>;
+  return (
+    <Typography variant="body1">
+      <span style={{ textWrap: 'nowrap' }}>
+        {label}: {value} |&nbsp;
+      </span>
+      <Hex>{children}</Hex>
+    </Typography>
+  );
 };
 
 interface ValueComponentProps<T = number> extends ValueProps<T> {
@@ -53,90 +63,85 @@ export const BooleanValue: FC<ValueComponentProps<boolean>> = ({ value: { hex, v
 };
 
 export const StringValue: FC<ValueComponentProps<string>> = ({ value: { hex, value }, label, path }) => {
-  return <Accordion defaultExpanded={false}>
-    <AccordionSummary
-      expandIcon={<ExpandMore />}
-      id={path.join('-')}
-    >
-      <HexValuedAndLabeled label={label} value={value}>
-        {hex}
-      </HexValuedAndLabeled>
-    </AccordionSummary>
-    <AccordionDetails>
-      <Stack>
-        <HexLabeled label="Hex">
+  return (
+    <Accordion defaultExpanded={false}>
+      <AccordionSummary expandIcon={<ExpandMore />} id={path.join('-')}>
+        <HexValuedAndLabeled label={label} value={value}>
           {hex}
-        </HexLabeled>
-      </Stack>
-      <Stack>Value: {value}</Stack>
-    </AccordionDetails>
-  </Accordion>;
+        </HexValuedAndLabeled>
+      </AccordionSummary>
+      <AccordionDetails>
+        <Stack>
+          <HexLabeled label="Hex">{hex}</HexLabeled>
+        </Stack>
+        <Stack>Value: {value}</Stack>
+      </AccordionDetails>
+    </Accordion>
+  );
 };
 
 export const HashValue: FC<ValueComponentProps<string>> = ({ value: { hex, value }, label, path }) => {
-  return <Accordion defaultExpanded={false}>
-    <AccordionSummary
-      expandIcon={<ExpandMore />}
-      id={path.join('-')}
-    >
-      <Typography variant="body1">
-        <span>{label}: <Hex fontWeight={500}>{value}</Hex> |&nbsp;</span>
-        <Hex>{hex}</Hex>
-      </Typography>
-    </AccordionSummary>
-    <AccordionDetails>
-      <Stack>
-        <HexLabeled label="Hex">
-          {hex}
-        </HexLabeled>
-      </Stack>
-      <Stack>
-        <HexLabeled label="Value">
-          {value}
-        </HexLabeled>
-      </Stack>
-    </AccordionDetails>
-  </Accordion>;
+  return (
+    <Accordion defaultExpanded={false}>
+      <AccordionSummary expandIcon={<ExpandMore />} id={path.join('-')}>
+        <Typography variant="body1">
+          <span>
+            {label}: <Hex fontWeight={500}>{value}</Hex> |&nbsp;
+          </span>
+          <Hex>{hex}</Hex>
+        </Typography>
+      </AccordionSummary>
+      <AccordionDetails>
+        <Stack>
+          <HexLabeled label="Hex">{hex}</HexLabeled>
+        </Stack>
+        <Stack>
+          <HexLabeled label="Value">{value}</HexLabeled>
+        </Stack>
+      </AccordionDetails>
+    </Accordion>
+  );
 };
 
 export const ScriptValue: FC<ValueComponentProps<string>> = ({ value: { hex, value }, label, path }) => {
-  return <Accordion defaultExpanded={false}>
-    <AccordionSummary
-      expandIcon={<ExpandMore />}
-      id={path.join('-')}
-    >
-      <Typography variant="body1" sx={{ overflowWrap: 'anywhere' }}>
-        <span>{label}: {value} |&nbsp;</span>
-        <Hex>{hex}</Hex>
-      </Typography>
-    </AccordionSummary>
-    <AccordionDetails>
-      <Stack>
+  return (
+    <Accordion defaultExpanded={false}>
+      <AccordionSummary expandIcon={<ExpandMore />} id={path.join('-')}>
         <Typography variant="body1" sx={{ overflowWrap: 'anywhere' }}>
-          <span>Hex:&nbsp;</span>
+          <span>
+            {label}: {value} |&nbsp;
+          </span>
           <Hex>{hex}</Hex>
         </Typography>
-      </Stack>
-      <Stack>
-        <Typography variant="body1" sx={{ overflowWrap: 'anywhere' }}>
-          Value: {value}
-        </Typography>
-      </Stack>
-    </AccordionDetails>
-  </Accordion>;
+      </AccordionSummary>
+      <AccordionDetails>
+        <Stack>
+          <Typography variant="body1" sx={{ overflowWrap: 'anywhere' }}>
+            <span>Hex:&nbsp;</span>
+            <Hex>{hex}</Hex>
+          </Typography>
+        </Stack>
+        <Stack>
+          <Typography variant="body1" sx={{ overflowWrap: 'anywhere' }}>
+            Value: {value}
+          </Typography>
+        </Stack>
+      </AccordionDetails>
+    </Accordion>
+  );
 };
 
 interface ListValueProps<T> extends ValueComponentProps<HexList<T>> {
   render: (value: Value<T>, itemPath: string[], idx: number) => ReactNode;
 }
 
-export const ListValue = <T, >({ label, value, path, render }: ListValueProps<T>) => {
-  return <ValueContainer label={label} value={value} path={path}>
-    <ListValueCount label={label} value={value.value.count} path={path} />
-    <ListValueList label={label} value={value.value.list} path={path}
-                   render={render}
-    />
-  </ValueContainer>;
+export const ListValue = <T,>({ label, value, path, render }: ListValueProps<T>) => {
+  return (
+    <ValueContainer label={label} value={value} path={path}>
+      <ListValueCount label={label} value={value.value.count} path={path} />
+      <ListValueList label={label} value={value.value.list} path={path} render={render} />
+    </ValueContainer>
+  );
 };
 
 const ListValueCount: FC<ValueComponentProps> = ({ label, value, path }) => {
@@ -148,13 +153,14 @@ interface ListValueListProps<T> extends ValuePathProps<Value<T>[]> {
   render: (value: Value<T>, itemPath: string[], idx: number) => ReactNode;
 }
 
-export const ListValueList = <T, >({ label, value, path, render }: ListValueListProps<T>) => {
+export const ListValueList = <T,>({ label, value, path, render }: ListValueListProps<T>) => {
   const listPath = [...path, 'list'];
-  return <ValueContainer label={`${label} List`} value={value} path={listPath}>
-    {value.value.map((it, i) => render(it, [...listPath, i.toString()], i))}
-  </ValueContainer>;
+  return (
+    <ValueContainer label={`${label} List`} value={value} path={listPath}>
+      {value.value.map((it, i) => render(it, [...listPath, i.toString()], i))}
+    </ValueContainer>
+  );
 };
-
 
 interface ValueContainerProps extends PropsWithChildren {
   value: { hex: string };
@@ -163,17 +169,12 @@ interface ValueContainerProps extends PropsWithChildren {
 }
 
 export const ValueContainer: FC<ValueContainerProps> = ({ value: { hex }, label, path, children }) => {
-  return <Accordion defaultExpanded={false}>
-    <AccordionSummary
-      expandIcon={<ExpandMore />}
-      id={path.join('-')}
-    >
-      <HexLabeled label={label}>
-        {hex}
-      </HexLabeled>
-    </AccordionSummary>
-    <AccordionDetails>
-      {children}
-    </AccordionDetails>
-  </Accordion>;
+  return (
+    <Accordion defaultExpanded={false}>
+      <AccordionSummary expandIcon={<ExpandMore />} id={path.join('-')}>
+        <HexLabeled label={label}>{hex}</HexLabeled>
+      </AccordionSummary>
+      <AccordionDetails>{children}</AccordionDetails>
+    </Accordion>
+  );
 };

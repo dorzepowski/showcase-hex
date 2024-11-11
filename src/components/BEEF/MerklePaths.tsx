@@ -5,9 +5,12 @@ import { ListValue } from '../Values/Value.tsx';
 import { MerklePath } from '../BUMP/MerklePath.tsx';
 
 export const MerklePaths: FC<ValueProps<BUMPs>> = ({ value }) => {
-  return <ListValue label="BUMPs" path={['bumps']} value={value}
-                    render={(it, itemPath, i) => <MerklePath key={i} idx={i} value={it} path={itemPath} />}
-  />;
+  return (
+    <ListValue
+      label="BUMPs"
+      path={['bumps']}
+      value={value}
+      render={(it, itemPath, i) => <MerklePath key={i} idx={i} value={it} path={itemPath} />}
+    />
+  );
 };
-
-

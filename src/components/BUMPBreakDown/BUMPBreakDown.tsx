@@ -14,9 +14,10 @@ export const BUMPBreakDown = () => {
     value: parsedBUMP.bump,
   };
 
-
-  return <Stack spacing={1}>
-    <Typography variant="h4">Break Down:</Typography>
-    <MerklePath idx={0} value={valuedBUMP} path={[]} />
-  </Stack>;
+  return (
+    <Stack spacing={1}>
+      <Typography variant="h4">Break Down:</Typography>
+      <MerklePath idx={0} value={valuedBUMP} path={[]} />
+    </Stack>
+  );
 };

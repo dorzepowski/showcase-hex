@@ -22,7 +22,6 @@ export interface InvalidBUMP {
 
 export type ParsedBUMP = ValidBUMP | EmptyBUMP | InvalidBUMP;
 
-
 interface BUMPContextValue {
   value: ParsedBUMP;
 }

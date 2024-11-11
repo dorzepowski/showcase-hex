@@ -6,8 +6,12 @@ import { Stack } from '@mui/material';
 function BEEFApp() {
   return (
     <BEEFProvider>
-      <Stack sx={{marginBottom: '2rem'}}><BEEFForm /></Stack>
-      <Stack><Outlet /></Stack>
+      <Stack sx={{ marginBottom: '2rem' }}>
+        <BEEFForm />
+      </Stack>
+      <Stack>
+        <Outlet />
+      </Stack>
     </BEEFProvider>
   );
 }
