@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Grid2, Stack } from '@mui/material';
 import { BUMPExplorer } from '../../components/BUMPExplorer/BUMPExplorer.tsx';
-import { BUMPBreakDown } from '../../components/BUMPBreakDown/BUMPBreakDown.tsx';
+import { BUMPBreakdown } from '../../components/BUMPBreakdown/BUMPBreakdown.tsx';
 
 export const BUMPView: FC = () => {
   return (
@@ -9,7 +9,7 @@ export const BUMPView: FC = () => {
       <Grid2 size={10} offset={1}>
         <Stack spacing={2}>
           <BUMPExplorer />
-          <BUMPBreakDown />
+          <BUMPBreakdown />
         </Stack>
       </Grid2>
     </>

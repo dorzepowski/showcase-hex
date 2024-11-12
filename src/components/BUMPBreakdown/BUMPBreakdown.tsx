@@ -2,7 +2,7 @@ import { Stack, Typography } from '@mui/material';
 import { useBUMP } from '../../context/BUMPProvider';
 import { MerklePath } from '../BUMP/MerklePath.tsx';
 
-export const BUMPBreakDown = () => {
+export const BUMPBreakdown = () => {
   const parsedBUMP = useBUMP();
 
   if (parsedBUMP.empty) {

@@ -2,7 +2,7 @@ import { Stack, Typography } from '@mui/material';
 import { useRawTx } from '../../context/RawTxProvider';
 import { RawTx } from '../RawTx/RawTx.tsx';
 
-export const RawTxBreakDown = () => {
+export const RawTxBreakdown = () => {
   const parsedRawTx = useRawTx();
 
   if (parsedRawTx.empty) {
