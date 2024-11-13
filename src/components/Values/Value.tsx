@@ -51,15 +51,23 @@ interface ValueComponentProps<T = number> extends ValueProps<T> {
 }
 
 export const NumberValue: FC<ValueComponentProps> = ({ value: { hex, value }, label, path }) => {
+  //I made some mistake with typing, so I need to make this null safe
   const val = {
     hex,
-    value: value.toString(),
+    value: value?.toString() || '',
   };
+
   return <StringValue value={val} label={label} path={path} />;
 };
 
 export const BooleanValue: FC<ValueComponentProps<boolean>> = ({ value: { hex, value }, label, path }) => {
-  return <StringValue value={{ hex, value: value.toString() }} label={label} path={path} />;
+  //I made some mistake with typing, so I need to make this null safe
+  const val = {
+    hex,
+    value: value?.toString() || '',
+  };
+
+  return <StringValue value={val} label={label} path={path} />;
 };
 
 export const StringValue: FC<ValueComponentProps<string>> = ({ value: { hex, value }, label, path }) => {
